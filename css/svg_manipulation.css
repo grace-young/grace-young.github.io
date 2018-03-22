@@ -1,0 +1,7 @@
+.hide-label {
+	visibility: hidden;
+}
+
+.show-label {
+	visibility: visible;
+}

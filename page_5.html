@@ -22,7 +22,7 @@
       <script src="js/svg_manipulation.js" defer></script>
       <script src="js/text_and_navbar.js" defer></script>
       <script src="js/audio_text_helpers.js" defer></script>
-      <script src="js/title_page_selu.js" defer></script>
+      <script src="js/page_5.js" defer></script>
 
 
 </head>
@@ -49,6 +49,11 @@
 
 
 <div class="main-body">
+    <div class="page-turn" id="left-arrow">
+      <a href="page_4.html">
+       <img class="arrow-svg" src="images/icons/left_arrow_new.svg" alt="left page arrow">  
+       </a>
+    </div>
     <div class="middle-page">
         <div class="interactive-container">
               <svg id="interactive-area"></svg>
@@ -56,26 +61,24 @@
     </div>
 
     <div class="page-turn" id="right-arrow">
-          <a href="page_1.html">
-            <img class="arrow-svg" src="images/icons/right_arrow_new.svg" alt="right page arrow">  
+          <a href="page_6.html">
+            <img class="arrow-svg" src="images/icons/right_arrow_new.svg" alt="left page arrow">  
           </a>
     </div>
 
-    <div class="story-descrip-div">
-      <div class="title-div">
-        <!-- title here --> 
-        <span>  
-          <img id="play-page" src="images/icons/ic_play_circle_outline_black_48px.svg" alt="play voice recording"/> 
-          <span id="text-title">Selu Uhwisvnv’i</span>
-        </span>
+    <div class="justify-content-start page-text">
+      <div class="playbtn">
+        <img id="play-page" src="images/icons/ic_play_circle_outline_black_48px.svg" alt="play voice recording"></img>
       </div>
-      <div class="subtitle-div">
-        Written by Constance Owl and Gracie Young
-        <br>
-        Recordings and translations by Tom Belt
-        <br>
-        Illustrations by Gracie Young
-      </div>
+      <div id="story-text-div" class="container d-flex flex-row">
+
+      </div> 
+    </div>
+
+    <div class="page-num-circle">
+      <span class="page-num">
+        Page <strong>5</strong>
+      </span>
     </div>
 
 </div>
@@ -83,4 +86,5 @@
 </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.4/svg.js"></script>
 </html>
