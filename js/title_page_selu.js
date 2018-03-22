@@ -44,6 +44,15 @@ var audioElem = createAudioElement("audio-main",
                  "audio/" + "wav");
       document.getElementById('audio-elements').appendChild(audioElem);
 
+if (window.innerHeight > window.innerWidth) {
+  window.alert("Rotate your device! This website should be used in landscape mode ");
+   window.confirm("Rotate your device! This website should be used in landscape mode ");
+  console.log("should have alerted");
+} else {
+  console.log("landscape");
+}
+
+
 function onSVGLoaded( f ){ 
    // add whole fragment to the SVG
    s.append( f );
@@ -67,22 +76,8 @@ function onSVGLoaded( f ){
                  "audio/" + clickableElements[clickableElem][2], "audio/wav");
     document.getElementById('audio-elements').appendChild(audioElem);
   }
-
-  loadAnimations();
 }
 
-function loadAnimations(){
-  // set gagama animations
-  for(var i=1; i <= clickableElements["cucumber"][3]; i++){
-    // get from s.
-    var elemID = "cucumber" + i;
-
-    $('#' + elemID).on('click', cucumberClicked);
-    //console.log(svgElem);
-
-//    svgElem.click(cucumberClicked);
-  }
-}
 
 
 
