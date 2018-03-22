@@ -53,7 +53,7 @@ var navBarHeight = document.getElementById('navbar').clientHeight;
 var imageHeight = fullPageHeight - navBarHeight;
 
 //s.attr({ viewBox: "0 0 " + fullPageWidth + " " + imageHeight });
-s.attr({ viewBox: "0 0 1024 728" });
+s.attr({ viewBox: "0 0 " + fullPageWidth + " " + imageHeight });
 
 /* This loads the image that fits an iPad */
 Snap.load("images/page_4_tablet.svg", onSVGLoaded ) ;
