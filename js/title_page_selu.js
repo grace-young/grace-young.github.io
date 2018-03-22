@@ -45,9 +45,8 @@ var audioElem = createAudioElement("audio-main",
       document.getElementById('audio-elements').appendChild(audioElem);
 
 if (window.innerHeight > window.innerWidth) {
-  window.alert("Rotate your device! This website should be used in landscape mode ");
    window.confirm("Rotate your device! This website should be used in landscape mode ");
-  console.log("should have alerted");
+   console.log("Rotate your device! This website should be used in landscape mode ");
 } else {
   console.log("landscape");
 }
