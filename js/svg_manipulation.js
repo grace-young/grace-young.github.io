@@ -13,12 +13,15 @@ $(document).ready(function(){
 
    // when an SVG group is clicked
    $('.clickable-g').click(function(event){
+      console.log("clicked: ");
+      console.log($(this).attr('id'));
    		svgImageClicked($(this).attr('id'));
    });
 });
 
 
 function svgImageClicked(groupID){
+  console.log("svgImageClicked: " + groupID);
   // ---- Handle Label ----- 
   var labelGroup = Snap.select("#" + getLabelIDFromGroupID(groupID));
 
@@ -89,7 +92,7 @@ function createLabel(groupID){
   });
 
   // sets on-click for the label 
-  labelGroup.click(labelClicked)
+  labelGroup.click(labelClicked);
 }
 
 function hearTappedGroup(groupID){
