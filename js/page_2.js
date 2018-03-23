@@ -93,7 +93,7 @@ function onSVGLoaded( f ){
                  "audio/" + clickableElements[clickableElem][2], "audio/wav");
     document.getElementById('audio-elements').appendChild(audioElem);
   }
-
+  loadClickableElementsInSVG();
   loadAnimations();
 }
 
