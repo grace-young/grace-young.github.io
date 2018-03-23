@@ -9,11 +9,12 @@
   TODO: add onclick to give afforadance for clicking left/right arrows
 */
 
-console.log("top of svg_manip");
-
 $(document).ready(function(){
 
    // when an SVG group is clicked
+   console.log("num clickable elem");
+   console.log($('.clickable-g'));
+
   $('.clickable-g').click(function(event){
       console.log("clicked: ");
       console.log($(this).attr('id'));
@@ -216,6 +217,4 @@ function isLabelDisplayed(labelGroup){
    }
   return false;
 }
-
-console.log("end of svg_manip");
 
