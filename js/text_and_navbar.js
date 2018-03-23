@@ -5,9 +5,6 @@ $(document).ready(function(){
 	setUpButtonAudio();
 	console.log(window.location.hostname);
 
-	// play audio when the page loads.
-	document.getElementById("audio-main").play();
-
 	$('.story-title').click(function () {
 		// hide any popups if click out
 		hideAllPopups();
@@ -49,6 +46,11 @@ $(document).ready(function(){
 	});
 
 });
+
+function playMainAudio(){
+	// play audio when the page loads.
+	document.getElementById("audio-main").play();
+}
 
 var usingSyllabary = true;
 

@@ -44,34 +44,39 @@ var RESOURCE_DATA_PHONETICS_INDEX = 1;
 
 var s = Snap("#interactive-area");
 
-var fullPageHeight = document.documentElement.clientHeight;
-var fullPageWidth = document.documentElement.clientWidth;
-var widthHeightRatio = fullPageWidth/fullPageHeight;
-var navBarHeight = document.getElementById('navbar').clientHeight;
+main();
 
-var imageHeight = fullPageHeight - navBarHeight;
+function main(){
+  var fullPageHeight = document.documentElement.clientHeight;
+  var fullPageWidth = document.documentElement.clientWidth;
+  var widthHeightRatio = fullPageWidth/fullPageHeight;
+  var navBarHeight = document.getElementById('navbar').clientHeight;
 
-s.attr({ viewBox: "0 0 " + fullPageWidth + " " + imageHeight });
+  var imageHeight = fullPageHeight - navBarHeight;
 
-/* This loads the image that fits an iPad */
-Snap.load("images/page_5_tablet.svg", onSVGLoaded ) ;
+  s.attr({ viewBox: "0 0 " + fullPageWidth + " " + imageHeight });
 
-// Create main audio
-var audioElem = createAudioElement("audio-main",
-                 "audio/" + "page_5/page_5_story.wav",
-                 "audio/" + "wav");
-      document.getElementById('audio-elements').appendChild(audioElem);
+  /* This loads the image that fits an iPad */
+  Snap.load("images/page_5_tablet.svg", onSVGLoaded ) ;
 
-// Add the story text
-var textDiv = document.getElementById('story-text-div');
-for (var i = 0; i < wordDataList.length; i++){
-  var wordDiv = createWordDiv(i, wordDataList[i][WORD_DATA_SYLLABARY_INDEX]);
-  textDiv.appendChild(wordDiv);
+  // Create main audio
+  var audioElem = createAudioElement("audio-main",
+                   "audio/" + "page_5/page_5_story.wav",
+                   "audio/" + "wav");
+        document.getElementById('audio-elements').appendChild(audioElem);
 
-  // add word audio
-  var audioElem = createAudioElement("audio-" + i,
-                 "audio/" + wordDataList[i][WORD_DATA_AUDIO_INDEX], "audio/mp4");
-      document.getElementById('audio-elements').appendChild(audioElem);
+  // Add the story text
+  var textDiv = document.getElementById('story-text-div');
+  for (var i = 0; i < wordDataList.length; i++){
+    var wordDiv = createWordDiv(i, wordDataList[i][WORD_DATA_SYLLABARY_INDEX]);
+    textDiv.appendChild(wordDiv);
+
+    // add word audio
+    var audioElem = createAudioElement("audio-" + i,
+                   "audio/" + wordDataList[i][WORD_DATA_AUDIO_INDEX], "audio/mp4");
+        document.getElementById('audio-elements').appendChild(audioElem);
+  }
+  playMainAudio();
 }
 
 
