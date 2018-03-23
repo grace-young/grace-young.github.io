@@ -28,7 +28,6 @@ function svgImageClicked(groupID){
   console.log("svgImageClicked: ");
   console.log(groupID);
 
-
   // ---- Handle Label ----- 
   var labelGroup = Snap.select("#" + getLabelIDFromGroupID(groupID));
 

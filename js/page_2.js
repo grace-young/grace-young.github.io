@@ -86,7 +86,7 @@ function onSVGLoaded( f ){
     } else {
       // make that one element clickable
       var svgElem = s.select("#" + clickableElem);
-      vgElem.node.classList.add("clickable-g")    
+      svgElem.node.classList.add("clickable-g")    
     }
     // add audio for this group type
     var audioElem = createAudioElement(clickableElem + "-audio",
