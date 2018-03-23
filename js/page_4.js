@@ -64,6 +64,11 @@ var audioElem = createAudioElement("audio-main",
                  "audio/" + "wav");
       document.getElementById('audio-elements').appendChild(audioElem);
 
+var munchAudio = createAudioElement("audio-munch",
+                 "audio/" + "lettuce_short.wav",
+                 "audio/" + "wav");
+      document.getElementById('audio-elements').appendChild(munchAudio);
+
 // Add the story text
 var textDiv = document.getElementById('story-text-div');
 for (var i = 0; i < wordDataList.length; i++){
@@ -111,12 +116,13 @@ function loadAnimations(){
    var rabbitSVG = s.select("#rabbit");
    var lettuceSVG = s.select("#lettuce3");
    var leafSVG = s.select("#eat_lettuce");
-   lettuceSVG.click(rabbitEatingLettuceAnimation);
+   lettuceSVG.click(eatOtherLettuceAnimation);
    rabbitSVG.click(rabbitEatingLettuceAnimation);
    leafSVG.click(rabbitEatingLettuceAnimation);
+   s.select("#arm").click(rabbitEatingLettuceAnimation);
 }
 
-function lettuceLeafEatenCallback(){
+function moveRabbit(){
   if(RABBIT_NEEDS_TO_ANIMATE){
     var rabbitSVG = s.select("#rabbit");
     var orgX = rabbitSVG.node.getBoundingClientRect().x;
@@ -134,6 +140,22 @@ function lettuceLeafEatenCallback(){
   }
 }
 
+function playMunchSound(){
+  document.getElementById("audio-munch").play();
+}
+
+function eatOtherLettuceAnimation(){
+// eat_lettuce_2
+  var leafSVG = s.select("#eat_lettuce_2");
+  leafSVG.animate({
+      "opacity":"0.0"
+    }, 
+    1500, // -- duration 
+    playMunchSound // -- finished
+  );
+}
+
+
 function rabbitEatingLettuceAnimation(){
 
   // make lettuce fade away --> when click on lettuce? rabbit?
@@ -141,8 +163,8 @@ function rabbitEatingLettuceAnimation(){
   leafSVG.animate({
       "opacity":"0.0"
     }, 
-    2500, // -- duration 
-    lettuceLeafEatenCallback // -- finished
+    1500, // -- duration 
+    moveRabbit // -- finished
     );
 }
 
