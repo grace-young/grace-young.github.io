@@ -32,8 +32,9 @@ var SUN_SET_NEEDS_TO_HAPPEN = true;
 var clickableElements = {
     'water' : ["ᎠᎹ", "ama", "page_5/word_3.wav", 1],
     'tree' : ["ᏡᎬ", "tlugv", "", 4],
-    'cucumber' : ["ᎦᎦᎹ", "gagama", "page_2/word_4.wav", 2],
-    'tomato' : ["ᎤᎾᎫᎯᏍᏗ", "unaguhisdi", "page_3/unaguhisdi.wav", 1],
+    'cucumber' : ["ᎦᎦᎹ", "gagama", "page_2/word_4.wav", 3],
+    'tomato' : ["ᎤᎾᎫᎯᏍᏗ", "unaguhisdi", "page_3/unaguhisdi.wav", 3],
+    'lettuce' : ["ᎪᏍᏓᎩᏍᏗ", "gosdagisdi", "page_4/word_2.wav", 3],
 }
 
 var RESOURCE_DATA_SYLLABARY_INDEX = 0;
@@ -114,14 +115,14 @@ function sunsetAnimation(){
     sunSVG.animate({
         "fill":"#FEBD25"
       }, 
-      2500, // -- duration 
+      1000, // -- duration 
       moveSunDown // -- set sun after it has changed color
     );
 
     s.select("#sky").animate({
         "fill":"#AF93DD"
       }, 
-      2000, // -- duration 
+      700, // -- duration 
        changeCloudColors // -- set sun after it has changed color
     );
 
@@ -147,7 +148,7 @@ function changeCloudColors(){
   s.select("#cloud1").animate({
         "fill":"#DDA7FA"
       }, 
-      2500, // -- duration 
+      1500, // -- duration 
     );
 }
 

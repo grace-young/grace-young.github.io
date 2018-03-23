@@ -124,7 +124,7 @@ function sunClicked(){
       sunSVG.animate({
       "fill":"#FCEE21"
         }, 
-        1000, // -- duration 
+        700, // -- duration 
         )
     } // -- finished
   );
