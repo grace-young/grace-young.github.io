@@ -5,43 +5,14 @@
     - sound for each element
 */
 
-/*
-  TODO: add onclick to give afforadance for clicking left/right arrows
-*/
-
-$(document).ready(function(){
-
-   // when an SVG group is clicked
-  //  console.log("num clickable elem");
-  //  console.log($('.clickable-g'));
-
-  // $('.clickable-g').click(function(event){
-  //     console.log("clicked: ");
-  //     console.log($(this).attr('id'));
-  //  		svgImageClicked($(this).attr('id'));
-  //  });
-  //        console.log("loaded clickable-g ");
-
-});
-
 function loadClickableElementsInSVG(){
-  console.log("(from func)");
-     console.log("num clickable elem");
-   console.log($('.clickable-g'));
-
   $('.clickable-g').click(function(event){
-      console.log("clicked: ");
-      console.log($(this).attr('id'));
       svgImageClicked($(this).attr('id'));
    });
-         console.log("loaded clickable-g ");
 }
 
 
 function svgImageClicked(groupID){
-  console.log("svgImageClicked: ");
-  console.log(groupID);
-
   // ---- Handle Label ----- 
   var labelGroup = Snap.select("#" + getLabelIDFromGroupID(groupID));
 
