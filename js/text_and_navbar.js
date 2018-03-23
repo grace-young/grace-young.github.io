@@ -155,7 +155,7 @@ function makeBasicPopupHTML(wordNum){
 	var hearButton = document.createElement("button");
 	hearButton.id = "hear-" + wordNum;
 	hearButton.classList.add('hear-button', 'popup-button');
-	hearButton.innerHTML = "<img src='images/icons/play_small.png'/>";
+	hearButton.innerHTML = "<img src='images/icons/play_small.svg'/>";
 	hearButton.addEventListener('click',hearWordClicked,false);
 
 	theSpan.appendChild(hearButton);
@@ -178,7 +178,7 @@ function makeShowWordPopupHTML(wordNum){
 	var backButton = document.createElement("button");
 	backButton.id = "back-" + wordNum;
 	backButton.classList.add('back-button', 'popup-button');
-	backButton.innerHTML = "<img src='images/icons/back_small.png'/>";
+	backButton.innerHTML = "<img src='images/icons/back_small.svg'/>";
 	backButton.addEventListener('click', backButtonClicked, false);
 
 	theSpan.appendChild(backButton);

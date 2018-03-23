@@ -1,12 +1,8 @@
 
 /*
-  Specific javascript for the "other_page.html"
+  Specific javascript for the "page_1.html"
   - loads specific clickable elements defined in 'clickableElements' map
   - loads translations for words in the story
-*/
-
-/*
-  TODO: create other screen ratios, change svg based on ratio, make english appear under instead of replace
 */
 
 // Hia Selu, sidanelv unihwisvnv’i edoha. 
@@ -31,7 +27,7 @@ var WORD_DATA_AUDIO_TYPE_INDEX = 4; // audio is link to file in audio folder
 var clickableElements = {
   'lettuce' : ["ᎠᎪᏍᏓᎩᏍᏗ", "agosdagisdi", "lettuce_short.wav", 3],
   'tree' : ["ᏡᎬ", "tlugv", "", 5],
-  'tomato' : ["ᏔᎹᏟ", "tamahli", "page_3/unaguhisdi.wav", 2],
+  'tomato' : ["ᎤᎾᎫᎯᏍᏗ", "unaguhisdi", "page_3/unaguhisdi.wav", 5],
   'cucumber' : ["ᎦᎦᎹ", "gagama", "page_2/word_4.wav", 3],
   'water' : ["ᎠᎹ", "ama", "page_5/word_3.wav", 1],
   'selu' : ["ᏎᎷ", "Selu,", "page_1/selu.wav", 1]
