@@ -17,6 +17,8 @@ $(document).ready(function(){
       console.log($(this).attr('id'));
    		svgImageClicked($(this).attr('id'));
    });
+         console.log("loaded clickable-g ");
+
 });
 
 
