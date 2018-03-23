@@ -87,6 +87,7 @@ function onSVGLoaded( f ){
     } else {
       // make that one element clickable
       var svgElem = s.select("#" + clickableElem);    
+      svgElem.click(svgImageClicked)
       svgElem.node.classList.add("clickable-g"); 
     }
 
