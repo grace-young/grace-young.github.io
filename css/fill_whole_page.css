@@ -209,7 +209,7 @@ span.word-highlighted {
 }
 
 .title-div {
-  font-size: 180%;
+  font-size: 250%;
   font-weight: bold;
 }
 
@@ -220,4 +220,5 @@ span.word-highlighted {
 .subtitle-div {
   font-style: italic;
   font-size: 80%;
+  margin-left: 10%;
 }

@@ -10,8 +10,6 @@ $(document).ready(function(){
 		document.getElementById("audio-button_next").play();
 	})
 
-
-
 	$('.story-title').click(function () {
 		// hide any popups if click out
 		hideAllPopups();
