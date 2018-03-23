@@ -44,13 +44,6 @@ var audioElem = createAudioElement("audio-main",
                  "audio/" + "wav");
       document.getElementById('audio-elements').appendChild(audioElem);
 
-if (window.innerHeight > window.innerWidth) {
-   window.confirm("Rotate your device! This website should be used in landscape mode ");
-   console.log("Rotate your device! This website should be used in landscape mode ");
-} else {
-  console.log("landscape");
-}
-
 
 function onSVGLoaded( f ){ 
    // add whole fragment to the SVG

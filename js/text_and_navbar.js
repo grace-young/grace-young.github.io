@@ -5,6 +5,13 @@ $(document).ready(function(){
 	setUpButtonAudio();
 	console.log(window.location.hostname);
 
+	if (window.innerHeight > window.innerWidth) {
+	   window.confirm("Rotate your device! This website should be used in landscape mode ");
+	   console.log("Rotate your device! This website should be used in landscape mode ");
+	} else {
+	  console.log("landscape");
+	}
+
 	$('.story-title').click(function () {
 		// hide any popups if click out
 		hideAllPopups();
