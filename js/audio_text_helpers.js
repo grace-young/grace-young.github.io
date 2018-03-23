@@ -20,41 +20,21 @@ function createAudioElement(audioID, audioFileName, audioType){
 */
 function createPopup(innerElements, wordButtonUnderneath){
   var popoutWidth = innerElements.offsetWidth;
+  console.log(wordButtonUnderneath);
 
   var wordHeight = wordButtonUnderneath.offsetHeight;
   var wordWidth = wordButtonUnderneath.offsetWidth;
+  var wordOffsetLeft = wordButtonUnderneath.wordOffsetLeft;
 
   var calloutDiv =  document.createElement("div");
   calloutDiv.classList.add("callout", "popup");
-  calloutDiv.style.marginTop = (wordHeight * 3 * -1) + "px";
-  if(wordWidth > 140){
-    calloutDiv.style.marginLeft = (wordWidth / 3) + "px";
-  } else if(wordWidth < 30){ 
-    calloutDiv.style.marginLeft = (wordWidth * -2.1) + "px";
-        console.log("range < 30");
-  } else if(wordWidth >= 30 && wordWidth < 46){
-      calloutDiv.style.marginLeft = (wordWidth * -1) + "px";
-        console.log("range 30 - 45");
-  }else if( wordWidth >= 46 && wordWidth < 50){
-    calloutDiv.style.marginLeft = (wordWidth *2* -1) + "px";
-        console.log("range 45 - 50");
-  } else if(wordWidth >= 50 && wordWidth < 65){
-    console.log("range 50 - 65");
-    calloutDiv.style.marginLeft = (wordWidth/1.8 * -1) + "px";
-  } else if(wordWidth >= 65 && wordWidth < 70){
-    console.log("range 65 - 70");
-    calloutDiv.style.marginLeft = (wordWidth/2 * -1) + "px";
-  } else if(wordWidth >= 70 && wordWidth < 100){
-    console.log("range 70 - 100");
-    calloutDiv.style.marginLeft = (wordWidth/4 * -1) + "px";
-  }
-  // // here, add what is supposed to be on the button
+  calloutDiv.style.marginTop = (wordHeight * 2.8 * -1) + "px";
+
+  // fix margin if we know what the div width is, unsure. 
+    //calloutDiv.style.marginLeft = (wordOffsetLeft - wordWidth *1.5) + "px";
+
 
   calloutDiv.appendChild(innerElements);
-
-  var notch = document.createElement("b");
-  notch.classList.add("notch");
-  calloutDiv.appendChild(notch);
 
   return calloutDiv;
 }

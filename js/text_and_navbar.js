@@ -110,7 +110,9 @@ function translateButtonClicked(buttonID){
 function phoneticsSyllbaryToggleClicked(buttonElem){
 	console.log( buttonElem);
 	if(buttonElem.textContent === "Yuwanega digohweli gv’di"){
-		document.getElementById("audio-button_phonetics").play();
+		// don't play audio for now because it is a little distracting
+
+		//document.getElementById("audio-button_phonetics").play();
 		
 		// change word to be in phonetics
 		changeWordsToSyllabaryPhonetics(WORD_DATA_PHONETICS_INDEX);
@@ -119,7 +121,7 @@ function phoneticsSyllbaryToggleClicked(buttonElem){
 		usingSyllabary = false;
 		buttonElem.innerHTML = "Tsalagi digohweli gv’di";
 	} else {
-		document.getElementById("audio-button_syllabary").play();
+		//document.getElementById("audio-button_syllabary").play();
 
 		// change word to be in phonetics
 		changeWordsToSyllabaryPhonetics(WORD_DATA_SYLLABARY_INDEX);
@@ -198,6 +200,7 @@ function translateWordClicked(event){
 	event.stopImmediatePropagation();
 	console.log("TRANSLATE WORD CLICKED");
 	var wordNum = $(this).attr('id').split("-")[1];
+
 	// make other HTML go away
 	var popup = document.getElementById("inner-popup-" + wordNum);
 	popup.innerHTML= "";
@@ -205,26 +208,16 @@ function translateWordClicked(event){
 
 	var parentEl = popup.parentElement;
 
+	var backButtonHeight = $("#back-" + wordNum)[0].clientHeight;
+
 	var loopCtr = 0;
 	parentEl.style.marginLeft = "-30px";
-	while(parentEl.clientHeight > 45){
-		if(loopCtr > 5){
-			console.log("breaking loop --> cannot set margin-left");
+	while(popup.offsetHeight > backButtonHeight){
+		if(loopCtr > 10){
 			break;
 		}
-		parentEl.style.marginLeft = (getLeftMargin(parentEl) - 50) + "px";
+		parentEl.style.marginLeft = (getLeftMargin(parentEl) *1.3) + "px"; //(getLeftMargin(parentEl) - 50) + "px";
 		loopCtr +=1;
-	}
-	// make the triangle over the word
-	if(wordNum >= wordDataList.length-1){
-		// LAST WORD
-		var lilTriangle = parentEl.childNodes[1];
-		var wordElem = parentEl.parentElement;
-		// console.log("little triangle");
-		// console.log(lilTriangle);
-		// console.log(parentEl);
-		// console.log(wordElem); // offsetWidth --> width of the word
-		lilTriangle.style.left = (popup.offsetWidth/3.2 + wordElem.offsetWidth) + "px";
 	}
 }
 
@@ -241,11 +234,21 @@ function testWordButtonClicked(wordButtonElem, wordNum){
 	// clear any other popup's
 	hideAllPopups();
 	console.log('hid all popups');
+
+	// highlight the word
+	wordButtonElem.classList.add('word-highlighted');
+
+	//console.log(wordButtonElem);
 	// show this popup
 	if(wordButtonElem.childNodes.length < 2){
 		// doesn't have the popup yet
 		var newPopup = createPopup(makeBasicPopupHTML(wordNum),wordButtonElem);
 		wordButtonElem.appendChild(newPopup);
+		// center popup over element
+		if(newPopup.offsetWidth >  wordButtonElem.offsetWidth){
+			newPopup.style.marginLeft =  -1*(newPopup.offsetWidth/2 - wordButtonElem.offsetWidth/2) + "px";
+			console.log(newPopup);
+		}
 	} 
 }
 
@@ -255,7 +258,14 @@ function hideAllPopups(){
 		var aPopup = allPopups[i];
 		aPopup.style.visibility = "hidden";
 		aPopup.outerHTML = "";
+
+		var wordNum = getWordNumFromInnerPopupID(aPopup.firstChild.id);
+		$('#word-' + wordNum)[0].classList.remove('word-highlighted');
 	}
+}
+
+function getWordNumFromInnerPopupID(innerPopupID){
+	return innerPopupID.split("-")[2];
 }
 
 /* Responds to a click of a word button. */

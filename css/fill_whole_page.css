@@ -111,6 +111,11 @@ body {
   border-color: #CCC7BE;
 }
 
+span.word-highlighted {
+  border-color: #ecd444;
+  background-color: yellow;
+}
+
 .word-button {
   margin-bottom: 0;
   background-color: transparent;
@@ -152,65 +157,32 @@ body {
   background: transparent;
 }
 
+.back-button{
+  padding: 0px;
+}
+
 .popup{
-  border-radius: 15%;
   padding: 1%;
+  padding-left: 0.5%;
+    position: absolute;
+    z-index: 1;
+    margin-top: -30px;
+
+    margin-bottom: 10%;
+    background-color: #F7F1E6; /*#ffffff; */
+
+    /* easy rounded corners for modern browsers */
+    border: 5px solid;
+    border-bottom: 0px;
+    border-color: yellow; /* #ecd444  */
 }
 
 .english-translation {
-  font-size: 60%;
+  font-size: 70%;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-color: #ecd444;
 }
-
-
-/* help with arrow underneath from: https://mrcoles.com/blog/callout-box-css-border-triangles-cross-browser/ */
-
-.callout {
-    /*position: relative;*/
-    position: absolute;
-    z-index: 1;
-
-  margin-top: -30px;
-
-
-    /*margin: 18px 0; */
-    margin-bottom: 10%;
-   /* padding: 18px 20px; */
-    background-color: #ffffff;
-    /* easy rounded corners for modern browsers */
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-
-    /*width: 300px;*/
-
-    /* makes them above so buttons line up with play button 
-   margin-top: -2em;
-       z-index: 1;
-       */
-}
-.callout .notch {
-    position: absolute;
-    bottom: -10px;
-    left: 40%;
-    margin: 0;
-    border-top: 10px solid #ffffff;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 0;
-    padding: 0;
-    width: 0;
-    height: 0;
-    /* ie6 height fix */
-    font-size: 0;
-    line-height: 0;
-     /* ie6 transparent fix */
-    _border-right-color: pink;
-    _border-left-color: pink;
-    _filter: chroma(color=pink);
-        z-index: 1;
-
-}
-
 
 /* title page styling */
 
