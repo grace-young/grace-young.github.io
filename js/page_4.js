@@ -160,6 +160,7 @@ function rabbitEatingLettuceAnimation(){
 
   // make lettuce fade away --> when click on lettuce? rabbit?
   var leafSVG = s.select("#eat_lettuce");
+  playMunchSound();
   leafSVG.animate({
       "opacity":"0.0"
     }, 
