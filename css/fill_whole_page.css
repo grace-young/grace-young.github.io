@@ -155,6 +155,7 @@ span.word-highlighted {
 .popup-button{
   border: 0px;
   background: transparent;
+  padding: 0px;
 }
 
 .hear-button {
