@@ -18,7 +18,7 @@ var WORD_DATA_AUDIO_INDEX = 3;
 // ID of element group in SVG --> [syllabary, phonetic, audioFileName, numElems]
 var clickableElements = {
   'selu' : ["ᏎᎷ", "Selu", "page_4/word_4.wav", 1],
-  //'garden' : ["","Uhwisvnv’i", ]
+  'garden' : ["ᎤᏫᏒᏅᎢ","Uhwisvnv’i", "title_page/garden.wav", 1]
 }
 var RESOURCE_DATA_SYLLABARY_INDEX = 0;
 var RESOURCE_DATA_PHONETICS_INDEX = 1;
@@ -75,6 +75,8 @@ function onSVGLoaded( f ){
                  "audio/" + clickableElements[clickableElem][2], "audio/wav");
     document.getElementById('audio-elements').appendChild(audioElem);
   }
+    loadClickableElementsInSVG();
+
 }
 
 
