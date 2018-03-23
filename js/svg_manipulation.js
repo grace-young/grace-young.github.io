@@ -11,14 +11,6 @@
 
 $(document).ready(function(){
 
-   // when an SVG group is clicked
-   $('.clickable-g').click(function(event){
-      console.log("clicked: ");
-      console.log($(this).attr('id'));
-   		svgImageClicked($(this).attr('id'));
-   });
-         console.log("loaded clickable-g ");
-
 });
 
 
