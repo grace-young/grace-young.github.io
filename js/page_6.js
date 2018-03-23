@@ -98,14 +98,15 @@ loadClickableElementsInSVG();
 
 function loadAnimations(){
   var cupSVG = s.select("#cup");
-  cupSVG.click(function(){
-    console.log("YO FROM THE ONCLICK");
-    var waterSVG = s.select("#water");
+  cupSVG.click(drinkWaterAnimation);
+  s.select("#mouth").click(drinkWaterAnimation);
+}
+
+function drinkWaterAnimation(){
+  var waterSVG = s.select("#water");
     waterSVG.animate({
       "opacity":"0.0"
     }, 2000);
-  })
-
 }
 
 
