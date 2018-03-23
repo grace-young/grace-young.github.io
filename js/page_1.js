@@ -82,21 +82,20 @@ function onSVGLoaded( f ){
         // make each element clickable
         var lookingForID = clickableElem + i;
         var svgElem = s.select("#" + lookingForID);  
-        console.log(lookingForID);  
         svgElem.node.classList.add("clickable-g"); 
-        console.log(svgElem.node.classList);      }
+      }
     } else {
       // make that one element clickable
       var svgElem = s.select("#" + clickableElem);    
-      console.log(clickableElem);  
       svgElem.node.classList.add("clickable-g"); 
-        console.log(svgElem.node.classList);    }
+    }
+
     // add audio for this group type
     if(clickableElements[clickableElem][2].length !== 0){
       var audioElem = createAudioElement(clickableElem + "-audio",
                    "audio/" + clickableElements[clickableElem][2], "audio/wav");
       document.getElementById('audio-elements').appendChild(audioElem);
-    }
+    } 
   }
   loadAnimations();
 }

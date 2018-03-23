@@ -3,7 +3,6 @@
   audioType - something like "audio/wav"
 */
 function createAudioElement(audioID, audioFileName, audioType){
-  
   var audioElem = document.createElement("AUDIO");
   audioElem.id = audioID;
 
