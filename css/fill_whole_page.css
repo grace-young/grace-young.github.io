@@ -157,13 +157,22 @@ span.word-highlighted {
   background: transparent;
 }
 
+.hear-button {
+  padding-left: 0px;
+}
+
+.translate-button {
+  padding-right: 0px;
+}
+
 .back-button{
   padding: 0px;
 }
 
 .popup{
-  padding: 1%;
+  padding: 0px;
   padding-left: 0.5%;
+  padding-right: 0.5%;
     position: absolute;
     z-index: 1;
     margin-top: -30px;
