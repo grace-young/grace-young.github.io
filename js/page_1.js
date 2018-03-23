@@ -27,7 +27,7 @@ var WORD_DATA_AUDIO_TYPE_INDEX = 4; // audio is link to file in audio folder
 var clickableElements = {
   'lettuce' : ["ᎠᎪᏍᏓᎩᏍᏗ", "agosdagisdi", "lettuce_short.wav", 3],
   'tree' : ["ᏡᎬ", "tlugv", "", 5],
-  'tomato' : ["ᎤᎾᎫᎯᏍᏗ", "unaguhisdi", "page_3/unaguhisdi.wav", 5],
+  'tomato' : ["ᎤᎾᎫᎯᏍᏗ", "unaguhisdi", "page_3/unaguhisdi.wav", 2],
   'cucumber' : ["ᎦᎦᎹ", "gagama", "page_2/word_4.wav", 3],
   'water' : ["ᎠᎹ", "ama", "page_5/word_3.wav", 1],
   'selu' : ["ᏎᎷ", "Selu,", "page_1/selu.wav", 1]
