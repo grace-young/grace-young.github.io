@@ -5,10 +5,8 @@ $(document).ready(function(){
 	setUpButtonAudio();
 	console.log(window.location.hostname);
 
-	$('#right-arrow').click(function () {
-		// TODO: figure out how to make this play before page turns
-		document.getElementById("audio-button_next").play();
-	})
+	// play audio when the page loads.
+	document.getElementById("audio-main").play();
 
 	$('.story-title').click(function () {
 		// hide any popups if click out
@@ -60,17 +58,6 @@ function setUpButtonAudio(){
                  "audio/" + "selu_uhwisvnvi.wav",
                  "audio/" + "wav");
       document.getElementById('audio-elements').appendChild(audioElem);
-	
-	// flip over (turn right)
-	var audioElem = createAudioElement("audio-button_next",
-                 "audio/" + "buttons/flip_it.wav",
-                 "audio/" + "wav");
-      document.getElementById('audio-elements').appendChild(audioElem);
-	// back one page
-	var audioElem = createAudioElement("audio-button_back",
-                 "audio/" + "buttons/back_one_page.wav",
-                 "audio/" + "wav");
-      document.getElementById('audio-elements').appendChild(audioElem);
 
     // show in phonetics
 	var audioElem = createAudioElement("audio-button_phonetics",
@@ -82,7 +69,6 @@ function setUpButtonAudio(){
                  "audio/" + "buttons/tsalagi_gvdi.wav",
                  "audio/" + "wav");
       document.getElementById('audio-elements').appendChild(audioElem);
-
 }
 
 function translateButtonClicked(buttonID){
