@@ -15,17 +15,21 @@ function loadClickableElementsInSVG(){
 function svgImageClicked(groupID){
   // ---- Handle Label ----- 
   var labelGroup = Snap.select("#" + getLabelIDFromGroupID(groupID));
+  console.log("imagelicked: " + groupID);
 
   if(isLabelDisplayed(labelGroup)){
     // Hide the label
     hideLabel(labelGroup);
+    console.log("hide label ");
   } else {
     // Show or Create the label
     if(labelGroup == null){
       // make a little element appear over the image
       createLabel(groupID); 
+      console.log("create label ");
     } else {
       showLabel(labelGroup);
+      console.log("show label ");
     }
   }
 

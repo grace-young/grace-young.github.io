@@ -18,7 +18,7 @@ var wordDataList = [["Gagama", "ᎦᎦᎹ", "Cucumber", "page_2/word_1.wav", "wa
               ["uduli(ha)", "ᎤᏚᎵ", "she wants", "page_2/word_2.wav", "wav"],
               ["ugisdiyi.", "ᎤᎩᏍᏗᏱ", "to eat peeled & sliced {S/N}.", "page_2/word_3.wav", "wav"],
               ["Gagama", "ᎦᎦᎹ", "Cucumber", "page_2/word_4.wav", "wav"],
-              ["hiya!", "ᎯᏯ", "You pick it up!", "page_2/word_5.wav", "wav"]];
+              ["hiya!", "ᎯᏯ", "You pick it {long/rigid} up!", "page_2/word_5.wav", "wav"]];
 
 var WORD_DATA_PHONETICS_INDEX = 0;
 var WORD_DATA_SYLLABARY_INDEX = 1;
@@ -28,9 +28,10 @@ var WORD_DATA_AUDIO_INDEX = 3;
 
 // ID of element group in SVG --> [syllabary, phonetic, audioFileName, numElems]
 var clickableElements = {
-  'lettuce' : ["ᎠᎪᏍᏓᎩᏍᏗ", "agosdagisdi", "lettuce_short.wav", 3],
+  'lettuce' : ["ᎪᏍᏓᎩᏍᏗ", "gosdagisdi", "page_4/word_2.wav", 3],
   'tomato' : ["ᎤᎾᎫᎯᏍᏗ", "unaguhisdi", "page_3/unaguhisdi.wav", 5],
   'cucumber' : ["ᎦᎦᎹ", "gagama", "page_2/word_4.wav", 3],
+  'selu' : ["ᏎᎷ", "Selu", "page_4/word_4.wav", 1],
 }
 var RESOURCE_DATA_SYLLABARY_INDEX = 0;
 var RESOURCE_DATA_PHONETICS_INDEX = 1;

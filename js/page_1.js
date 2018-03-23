@@ -25,7 +25,7 @@ var WORD_DATA_AUDIO_TYPE_INDEX = 4; // audio is link to file in audio folder
 
 // ID of element group in SVG --> [syllabary, phonetic, audioFileName, numElems]
 var clickableElements = {
-  'lettuce' : ["ᎠᎪᏍᏓᎩᏍᏗ", "agosdagisdi", "lettuce_short.wav", 3],
+  'lettuce' : ["ᎪᏍᏓᎩᏍᏗ", "gosdagisdi", "page_4/word_2.wav", 3],
   'tree' : ["ᏡᎬ", "tlugv", "", 5],
   'tomato' : ["ᎤᎾᎫᎯᏍᏗ", "unaguhisdi", "page_3/unaguhisdi.wav", 2],
   'cucumber' : ["ᎦᎦᎹ", "gagama", "page_2/word_4.wav", 3],

@@ -5,14 +5,6 @@ $(document).ready(function(){
 	setUpButtonAudio();
 	console.log(window.location.hostname);
 
-   // when an SVG group is clicked
-   $('.clickable-g').click(function(event){
-      console.log("clicked: ");
-      console.log($(this).attr('id'));
-   		svgImageClicked($(this).attr('id'));
-   });
-         console.log("loaded clickable-g ");
-
 	$('#right-arrow').click(function () {
 		// TODO: figure out how to make this play before page turns
 		document.getElementById("audio-button_next").play();
